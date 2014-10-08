@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[ながたにの技術メモ]]></title>
+  <subtitle><![CDATA[書くことがあれば書く]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://nagatani.github.io/"/>
+  <updated>2014-10-08T13:15:43.695Z</updated>
+  <id>http://nagatani.github.io/</id>
+  
+  <author>
+    <name><![CDATA[Nagatani]]></name>
+    <email><![CDATA[nagatani@work-ark.jp]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://nagatani.github.io/2014/10/08/hello-world/"/>
+    <id>http://nagatani.github.io/2014/10/08/hello-world/</id>
+    <published>2014-10-08T13:13:25.000Z</published>
+    <updated>2014-09-11T16:55:28.000Z</updated>
+    <content type="html"><![CDATA[<p>GitHub Pagesに<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>入れた。</p>
+<p>何書くかは決めてない。<br>テキトーに何かしら書いていきたい。</p>
+<h2 id="HexoをGitHub_Pagesに構築するのに参考にしたサイト">HexoをGitHub Pagesに構築するのに参考にしたサイト</h2>
+<ul>
+<li><a href="http://qiita.com/bird_nitryn/items/5988a1efe47e0d47132b" target="_blank" rel="external">Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita</a></li>
+<li><a href="http://liginc.co.jp/web/programming/server/104594" target="_blank" rel="external">所要時間3分!? Github PagesとHEXOで爆速ブログ構築してみよう！ | 株式会社LIG</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>GitHub Pagesに<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>入れた。</p>
+<p>何書くかは決めてない。<br>テキトーに何かしら書いていきたい。</p>
+<h2 id="He]]>
+    </summary>
+    
+      <category term="hexo" scheme="http://nagatani.github.io/tags/hexo/"/>
+    
+      <category term="Diary" scheme="http://nagatani.github.io/categories/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[JavaFX8でのLook and Feelを設定する]]></title>
+    <link href="http://nagatani.github.io/2014/10/08/JavaFX8-fxml-lookandfeel/"/>
+    <id>http://nagatani.github.io/2014/10/08/JavaFX8-fxml-lookandfeel/</id>
+    <published>2014-10-08T08:00:56.000Z</published>
+    <updated>2014-10-08T08:26:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="JavaFX8のLook_and_Feel">JavaFX8のLook and Feel</h1>
+<p>標準では、Modenaよ呼ばれるルック・アンド・フィールが使用されている。</p>
+<p>これを変更することで、アプリケーション全体の外観を変える事ができる。<br>詳細は省く。</p>
+<p>FXMLには、全体の外観を変更する手法として、HTMLと同様にCSSを使用することができるが、これに関してはまた後日記事にしようと思う。<br><a id="more"></a></p>
+<h1 id="メインクラスでコーディングが必要">メインクラスでコーディングが必要</h1>
+<p>以下、Hello Worldのアプリで作成した、JavaFXApplication1.javaのコードをまるごと載せる。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> javafxapplication1;</div><div class="line"></div><div class="line"><span class="keyword">import</span> javafx.application.Application;</div><div class="line"><span class="keyword">import</span> javafx.fxml.FXMLLoader;</div><div class="line"><span class="keyword">import</span> javafx.scene.Parent;</div><div class="line"><span class="keyword">import</span> javafx.scene.Scene;</div><div class="line"><span class="keyword">import</span> javafx.stage.Stage;</div><div class="line"></div><div class="line"><span class="javadoc">/**</span></div><div class="line"> *</div><div class="line"> *<span class="javadoctag"> @author</span> Nagatani</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaFXApplication1</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>{</div><div class="line">    </div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span>(Stage stage) <span class="keyword">throws</span> Exception {</div><div class="line">        Parent root = FXMLLoader.load(getClass().getResource(<span class="string">"FXMLDocument.fxml"</span>));</div><div class="line">        </div><div class="line">        Scene scene = <span class="keyword">new</span> Scene(root);</div><div class="line"></div><div class="line">        <span class="comment">//setUserAgentStylesheet(STYLESHEET_MODENA);</span></div><div class="line">        setUserAgentStylesheet(STYLESHEET_CASPIAN);</div><div class="line">        </div><div class="line">        stage.setScene(scene);</div><div class="line">        stage.show();</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="javadoc">/**</span></div><div class="line">     *<span class="javadoctag"> @param</span> args the command line arguments</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String[] args) {</div><div class="line">        launch(args);</div><div class="line">    }</div><div class="line">    </div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>ここで、21,22行目に追加した<code>setUserAgentStylesheet()</code>メソッドを<code>public void start(Stage stage) throws Exception</code>メソッド内でコールする。<br><code>setUserAgentStylesheet()</code>メソッドの引数には、<code>STYLESHEET_CASPIAN</code>と<code>STYLESHEET_MODENA</code>が用意されている。<br>標準ではどうやらこの2種類のようですね。</p>
+<p><code>STYLESHEET_MODENA</code>は、なにも設定しなくても適用されているスタイルのため、あえて明示的に書かなくても良い。<br>以前まで使用されていた標準のスタイルにしたい場合は、<code>STYLESHEET_CASPIAN</code>を設定する。</p>
+<h1 id="実際どうなるか">実際どうなるか</h1>
+<p>テキトーにコントロールを乗せたものをMacで実行した場合は以下のようになる。<br>※FXMLは最後に載せます。</p>
+<p>まずは標準のスタイルのModenaから。<br><img src="/image/sc-javafx8-laf-modena.png" alt="STYLESHEET_MODENA"></p>
+<p>次に、Caspian。<br><img src="/image/sc-javafx8-laf-caspian.png" alt="STYLESHEET_CASPIAN"></p>
+<h1 id="どっちがいいか？">どっちがいいか？</h1>
+<p>好みによると思う。</p>
+<p>スクリーンショット見るとなんとなく、Modenaの方が余白を大きく取ってあり、各コントロールに余裕があるように感じますかね。<br>逆にCaspianは、圧迫感があるようなないような……。</p>
+<p>個人的には、Modenaの方がスッキリしてて余裕あって好きです。</p>
+<h1 id="スクリーンショット用に作成したFXML">スクリーンショット用に作成したFXML</h1>
+<p>だいぶ雑に作成したので、細かいところへのツッコミはなしでお願いします。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div></pre></td><td class="code"><pre><div class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></div><div class="line"></div><div class="line"><span class="pi">&lt;?import javafx.scene.image.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import javafx.scene.web.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import javafx.scene.text.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import java.lang.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import java.util.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import javafx.scene.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import javafx.scene.control.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import javafx.scene.layout.*?&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="title">Accordion</span> <span class="attribute">maxHeight</span>=<span class="value">"-Infinity"</span> <span class="attribute">maxWidth</span>=<span class="value">"-Infinity"</span> <span class="attribute">minHeight</span>=<span class="value">"-Infinity"</span> <span class="attribute">minWidth</span>=<span class="value">"-Infinity"</span> <span class="attribute">prefHeight</span>=<span class="value">"400.0"</span> <span class="attribute">prefWidth</span>=<span class="value">"600.0"</span> <span class="attribute">xmlns</span>=<span class="value">"http://javafx.com/javafx/8"</span> <span class="attribute">xmlns:fx</span>=<span class="value">"http://javafx.com/fxml/1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">panes</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">TitledPane</span> <span class="attribute">animated</span>=<span class="value">"true"</span> <span class="attribute">text</span>=<span class="value">"Controls - Button"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">VBox</span> <span class="attribute">AnchorPane.bottomAnchor</span>=<span class="value">"0.0"</span> <span class="attribute">AnchorPane.leftAnchor</span>=<span class="value">"0.0"</span> <span class="attribute">AnchorPane.rightAnchor</span>=<span class="value">"0.0"</span> <span class="attribute">AnchorPane.topAnchor</span>=<span class="value">"0.0"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Button"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">defaultButton</span>=<span class="value">"true"</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Default Button"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">cancelButton</span>=<span class="value">"true"</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Cansel Button"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">disable</span>=<span class="value">"true"</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Button Disabled"</span> /&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">MenuButton</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"MenuButton"</span>&gt;</span></div><div class="line">                      <span class="tag">&lt;<span class="title">items</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Action 1"</span> /&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Action 2"</span> /&gt;</span></div><div class="line">                      <span class="tag">&lt;/<span class="title">items</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;/<span class="title">MenuButton</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">MenuButton</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"MenuButton Disabled"</span>&gt;</span></div><div class="line">                      <span class="tag">&lt;<span class="title">items</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Action 1"</span> /&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">MenuItem</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Action 2"</span> /&gt;</span></div><div class="line">                      <span class="tag">&lt;/<span class="title">items</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;/<span class="title">MenuButton</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">Group</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">RadioButton</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">selected</span>=<span class="value">"true"</span> <span class="attribute">text</span>=<span class="value">"RadioButton - Selected"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">RadioButton</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"RadioButton - not Selected"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">RadioButton</span> <span class="attribute">disable</span>=<span class="value">"true"</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"RadioButton Disabled"</span> /&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">CheckBox</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"CheckBox"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">CheckBox</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"CheckBox"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">CheckBox</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"CheckBox"</span> /&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">ChoiceBox</span> <span class="attribute">prefWidth</span>=<span class="value">"150.0"</span> /&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">ComboBox</span> <span class="attribute">prefWidth</span>=<span class="value">"150.0"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">ComboBox</span> <span class="attribute">prefWidth</span>=<span class="value">"150.0"</span> /&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">ToggleButton</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"ToggleButton"</span> /&gt;</span></div><div class="line">                     <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">Slider</span> /&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">Slider</span> <span class="attribute">orientation</span>=<span class="value">"VERTICAL"</span> /&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">ScrollBar</span> /&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">ScrollBar</span> <span class="attribute">orientation</span>=<span class="value">"VERTICAL"</span> /&gt;</span></div><div class="line">           <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="title">VBox</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">TitledPane</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">TitledPane</span> <span class="attribute">text</span>=<span class="value">"Controls - Text"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">VBox</span> <span class="attribute">AnchorPane.bottomAnchor</span>=<span class="value">"0.0"</span> <span class="attribute">AnchorPane.leftAnchor</span>=<span class="value">"0.0"</span> <span class="attribute">AnchorPane.rightAnchor</span>=<span class="value">"0.0"</span> <span class="attribute">AnchorPane.topAnchor</span>=<span class="value">"0.0"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">Label</span> <span class="attribute">text</span>=<span class="value">"Label"</span> /&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">TextField</span> <span class="attribute">text</span>=<span class="value">"TextField"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">TextField</span> <span class="attribute">promptText</span>=<span class="value">"Prompt Text"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">TextField</span> <span class="attribute">editable</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Not Editabled"</span> /&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">TextField</span> <span class="attribute">disable</span>=<span class="value">"true"</span> <span class="attribute">text</span>=<span class="value">"Disabled"</span> /&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="title">HBox</span> <span class="attribute">prefHeight</span>=<span class="value">"100.0"</span> <span class="attribute">prefWidth</span>=<span class="value">"200.0"</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="title">TextArea</span> <span class="attribute">prefHeight</span>=<span class="value">"200.0"</span> <span class="attribute">prefWidth</span>=<span class="value">"200.0"</span> <span class="attribute">text</span>=<span class="value">"Text Area"</span> /&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">DatePicker</span> <span class="attribute">promptText</span>=<span class="value">"Date Picker"</span> /&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">              <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">TextFlow</span> <span class="attribute">prefHeight</span>=<span class="value">"200.0"</span> <span class="attribute">prefWidth</span>=<span class="value">"200.0"</span>&gt;</span></div><div class="line">                           <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;<span class="title">Label</span> <span class="attribute">text</span>=<span class="value">"TextFlow"</span> /&gt;</span></div><div class="line">                           <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;/<span class="title">TextFlow</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">           <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="title">VBox</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">TitledPane</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">TitledPane</span> <span class="attribute">text</span>=<span class="value">"Controls - Other"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">         <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="title">VBox</span>&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">TabPane</span> <span class="attribute">tabClosingPolicy</span>=<span class="value">"UNAVAILABLE"</span>&gt;</span></div><div class="line">                          <span class="tag">&lt;<span class="title">tabs</span>&gt;</span></div><div class="line">                            <span class="tag">&lt;<span class="title">Tab</span> <span class="attribute">text</span>=<span class="value">"Untitled Tab 1"</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">                                <span class="tag">&lt;<span class="title">AnchorPane</span> <span class="attribute">minHeight</span>=<span class="value">"0.0"</span> <span class="attribute">minWidth</span>=<span class="value">"0.0"</span> /&gt;</span></div><div class="line">                              <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">                            <span class="tag">&lt;/<span class="title">Tab</span>&gt;</span></div><div class="line">                            <span class="tag">&lt;<span class="title">Tab</span> <span class="attribute">text</span>=<span class="value">"Untitled Tab 2"</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">                                <span class="tag">&lt;<span class="title">AnchorPane</span> <span class="attribute">minHeight</span>=<span class="value">"0.0"</span> <span class="attribute">minWidth</span>=<span class="value">"0.0"</span> /&gt;</span></div><div class="line">                              <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">                            <span class="tag">&lt;/<span class="title">Tab</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;<span class="title">Tab</span> <span class="attribute">text</span>=<span class="value">"Untitled Tab"</span>&gt;</span></div><div class="line">                                <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">                                  <span class="tag">&lt;<span class="title">AnchorPane</span> <span class="attribute">minHeight</span>=<span class="value">"0.0"</span> <span class="attribute">minWidth</span>=<span class="value">"0.0"</span> /&gt;</span></div><div class="line">                                <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;/<span class="title">Tab</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;<span class="title">Tab</span> <span class="attribute">text</span>=<span class="value">"Untitled Tab"</span>&gt;</span></div><div class="line">                                <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">                                  <span class="tag">&lt;<span class="title">AnchorPane</span> <span class="attribute">minHeight</span>=<span class="value">"0.0"</span> <span class="attribute">minWidth</span>=<span class="value">"0.0"</span> /&gt;</span></div><div class="line">                                <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;/<span class="title">Tab</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;<span class="title">Tab</span> <span class="attribute">text</span>=<span class="value">"Untitled Tab"</span>&gt;</span></div><div class="line">                                <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">                                  <span class="tag">&lt;<span class="title">AnchorPane</span> <span class="attribute">minHeight</span>=<span class="value">"0.0"</span> <span class="attribute">minWidth</span>=<span class="value">"0.0"</span> /&gt;</span></div><div class="line">                                <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;/<span class="title">Tab</span>&gt;</span></div><div class="line">                          <span class="tag">&lt;/<span class="title">tabs</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;/<span class="title">TabPane</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">TitledPane</span> <span class="attribute">animated</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"TiledPane"</span>&gt;</span></div><div class="line">                          <span class="tag">&lt;<span class="title">content</span>&gt;</span></div><div class="line">                            <span class="tag">&lt;<span class="title">AnchorPane</span> <span class="attribute">minHeight</span>=<span class="value">"0.0"</span> <span class="attribute">minWidth</span>=<span class="value">"0.0"</span> /&gt;</span></div><div class="line">                          <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;/<span class="title">TitledPane</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">ToolBar</span>&gt;</span></div><div class="line">                          <span class="tag">&lt;<span class="title">items</span>&gt;</span></div><div class="line">                              <span class="tag">&lt;<span class="title">Label</span> <span class="attribute">text</span>=<span class="value">"ToolBar"</span> /&gt;</span></div><div class="line">                            <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">mnemonicParsing</span>=<span class="value">"false"</span> <span class="attribute">text</span>=<span class="value">"Button"</span> /&gt;</span></div><div class="line">                          <span class="tag">&lt;/<span class="title">items</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;/<span class="title">ToolBar</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;<span class="title">HBox</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">Label</span> <span class="attribute">text</span>=<span class="value">"ListView"</span> /&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="title">ListView</span> /&gt;</span></div><div class="line">                     <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">                  <span class="tag">&lt;/<span class="title">HBox</span>&gt;</span></div><div class="line">               <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="title">VBox</span>&gt;</span></div><div class="line">         <span class="tag">&lt;/<span class="title">content</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">TitledPane</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">panes</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Accordion</span>&gt;</span></div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="JavaFX8のLook_and_Feel">JavaFX8のLook and Feel</h1>
+<p>標準では、Modenaよ呼ばれるルック・アンド・フィールが使用されている。</p>
+<p>これを変更することで、アプリケーション全体の外観を変える事ができる。<br>詳細は省く。</p>
+<p>FXMLには、全体の外観を変更する手法として、HTMLと同様にCSSを使用することができるが、これに関してはまた後日記事にしようと思う。<br>]]>
+    
+    </summary>
+    
+      <category term="Java" scheme="http://nagatani.github.io/tags/Java/"/>
+    
+      <category term="JavaFX8" scheme="http://nagatani.github.io/tags/JavaFX8/"/>
+    
+      <category term="FXML" scheme="http://nagatani.github.io/tags/FXML/"/>
+    
+      <category term="JavaFX8" scheme="http://nagatani.github.io/categories/JavaFX8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[MacのFinederで不可視となっているディレクトリやファイルを表示する方法]]></title>
+    <link href="http://nagatani.github.io/2014/10/07/mac-finder-view-allfile/"/>
+    <id>http://nagatani.github.io/2014/10/07/mac-finder-view-allfile/</id>
+    <published>2014-10-07T05:40:51.000Z</published>
+    <updated>2014-10-07T05:54:39.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="ターミナル開いてls_-a使え！">ターミナル開いて<code>ls -a</code>使え！</h1>
+<p>嘘です。ごめん。</p>
+<h1 id="ls_-a使えば見れるけど、Finderでも見たい。"><code>ls -a</code>使えば見れるけど、Finderでも見たい。</h1>
+<p>そんなあなたに、以下のコマンドを捧げる。<br>ターミナル開いて、2行入れるだけ。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ defaults write com.apple.finder AppleShowAllFiles <span class="literal">true</span></div><div class="line">$ killall Finder</div></pre></td></tr></table></figure>
+
+<p>※<code>killall Finder</code>でFinderが再起動されるので一応注意すること。</p>
+<h1 id="戻し方も教えとく">戻し方も教えとく</h1>
+<p>1行目のコマンドの最後を<code>true</code>から<code>false</code>に変えるだけ。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ defaults write com.apple.finder AppleShowAllFiles <span class="literal">false</span></div><div class="line">$ killall Finder</div></pre></td></tr></table></figure>
+
+<h1 id="Finderでシステム関連の大事なファイルやディレクトリも表示される">Finderでシステム関連の大事なファイルやディレクトリも表示される</h1>
+<p>なので、特に理由がないなら、不可視なものは不可視の方が何かと安全ですね。<br>用事が済んだら、元に戻しておくのがオススメ。</p>
+<p>p.s.<br>JavaFXの記事を書くといったな、あれはまだ下書きだ！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="ターミナル開いてls_-a使え！">ターミナル開いて<code>ls -a</code>使え！</h1>
+<p>嘘です。ごめん。</p>
+<h1 id="ls_-a使えば見れるけど、Finderでも見たい。"><code>ls -a</code>使えば見れるけど、]]>
+    </summary>
+    
+      <category term="Mac" scheme="http://nagatani.github.io/tags/Mac/"/>
+    
+      <category term="terminal" scheme="http://nagatani.github.io/tags/terminal/"/>
+    
+      <category term="Mac" scheme="http://nagatani.github.io/categories/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[JavaFX8 FXMLでのGUIアプリケーション開発 - 事始め]]></title>
+    <link href="http://nagatani.github.io/2014/09/17/JavaFX8-intro/"/>
+    <id>http://nagatani.github.io/2014/09/17/JavaFX8-intro/</id>
+    <published>2014-09-17T06:11:01.000Z</published>
+    <updated>2014-09-17T07:57:21.000Z</updated>
+    <content type="html"><![CDATA[<p>今回から、JavaFX8(JavaFX on Java8)についての記事を幾つか書こうと思う。<br>前持って言って置かなければならないんだけど、私はJavaFXでの開発実績がない。<br>この記事もある程度勉強進めた段階で書いてるけど、自分がわかるように書くだけなので参考にならなくても知らんし、間違った内容もあるかもしれんし、途中で飽きたら放置するのでそのつもりでお願いします。</p>
+<h2 id="Java8から標準機能となったJavaFX">Java8から標準機能となったJavaFX</h2>
+<p>Swingと取って代わって、JavaFXがJavaのGUI開発の標準的な位置づけになりつつある（なった）と思って差し支えないかと思う。<br>何言ってんだSwingが標準だろうが！ってお怒りの方、落ち着いてください。そういう意見もあります。(あるのかどうかも知らんけど)<br><a id="more"></a></p>
+<h2 id="とりあえず_Java_8_を_NetBeans_8_で開発できるようにしよう">とりあえず Java 8 を NetBeans 8 で開発できるようにしよう</h2>
+<p>Eclipse？<br>そんなものは知らん。</p>
+<p>IntelliJ IDEA？<br>ライセンス欲しい。</p>
+<p>Java8とNetBeans8がセットになったJava SE 8が以下のサイト(Oracle)よりダウンロードできる。<br>JavaでGUIアプリケーションを今から始める。という方は、迷わずNetBeans付きのものをダウンロードすると良いだろう。</p>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-142931.html" target="_blank" rel="external">Java SE Downloads - Netbeans + JDK Bundle</a></p>
+<p>NetBeansはGUIアプリケーション開発に非常に向いているIDEだと思う。<br>Oracleが配布してるし、なんとなく安心感を得られます。<br>……よく落ちるけど。</p>
+<p>ダウンロードからインストールまでは、それほど躓くところはないと思う。<br>PATHも多分インストーラーが通してくれるはず。</p>
+<p>余談だけど、WindowsでNetBeans立ち上げると、フォント見た瞬間に拒絶反応出る。<br>最近はJavaでの開発はもっぱらMac OSでやってる。<br>WindowsでNetBeans使う場合は、まず最初にエディタのフォントを見やすいのに変えることをオススメしたい。</p>
+<h2 id="FXMLのアプリケーションには必需品と言ってもいい_JavaFX_Scene_Builder_2-0">FXMLのアプリケーションには必需品と言ってもいい JavaFX Scene Builder 2.0</h2>
+<p>これ入れておくと捗る場合がほとんどだと思うので、入れておく。<br>じゃないとGUIの調整に、FXMLと呼ばれるJavaFX用のXMLを直接直す必要性が出てくる。<br>慣れてる人なら入れなくてもいいかもしれないが、便利なツールなので入れておくに越したことはないと思う。</p>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html" target="_blank" rel="external">JavaFX Scene Builder 2.0 Download</a></p>
+<p>また、JavaFX8には、Swing互換っぽい動きをするJavaFX in Swingなるものと、JavaFX FXMLなるものがある。<br>Swingに慣れている人は前者を使えば良い。それなら Scene Builderはいらない。<br>だけど、どうせなら FXML を覚えた方が後々役に立つだろうと思う。</p>
+<h2 id="とりあえず_JavaFX8_で世界に挨拶をしとこう。">とりあえず JavaFX8 で世界に挨拶をしとこう。</h2>
+<p>みんな最初は世界に挨拶することから始まります。<br>手順は以下のとおり。</p>
+<ol>
+<li>NetBeans8を起動</li>
+<li>メニューバーの[ファイル]→[新規プロジェクト]  (Macなら[shift] + [⌘] + [n])</li>
+<li>カテゴリから「JavaFX」を選択</li>
+<li>プロジェクトから「JavaFX FXMLアプリケーション」を選択</li>
+<li>「次へ」</li>
+<li>プロジェクトの保存先等を設定する</li>
+<li>「終了」</li>
+<li>プロジェクトを実行</li>
+</ol>
+<h2 id="もう少し詳しく">もう少し詳しく</h2>
+<h3 id="1-_NetBeans8を起動">1. NetBeans8を起動</h3>
+<h3 id="2-_メニューバーの[ファイル]→[新規プロジェクト]_(Macなら[shift]_+_[⌘]_+_[n])">2. メニューバーの[ファイル]→[新規プロジェクト]  (Macなら[shift] + [⌘] + [n])</h3>
+<p><img src="/image/sc-javafx8-intro-01.png" alt="これ"></p>
+<h3 id="3-_カテゴリから「JavaFX」を選択">3. カテゴリから「JavaFX」を選択</h3>
+<p><img src="/image/sc-javafx8-intro-02.png" alt="「次へ」を押すのはまだ早い！"></p>
+<h3 id="4-_プロジェクトから「JavaFX_FXMLアプリケーション」を選択">4. プロジェクトから「JavaFX FXMLアプリケーション」を選択</h3>
+<h3 id="5-_「次へ」">5. 「次へ」</h3>
+<p><img src="/image/sc-javafx8-intro-03.png" alt="ちゃんとJavaFX FXMLアプリケーションを選ぼう。"></p>
+<h3 id="6-_プロジェクトの保存先等を設定する">6. プロジェクトの保存先等を設定する</h3>
+<p><img src="/image/sc-javafx8-intro-04.png" alt="保存先とかは分かりやすいところにまとめておいたほうが良いと思う。"></p>
+<h3 id="7-_「終了」">7. 「終了」</h3>
+<p><img src="/image/sc-javafx8-intro-05.png" alt="プロジェクトが生成できた。"></p>
+<h3 id="8-_プロジェクトを実行">8. プロジェクトを実行</h3>
+<p><img src="/image/sc-javafx8-intro-06.png" alt="こんなボタンがあるはず。探して押そう。"></p>
+<h2 id="実行すると">実行すると</h2>
+<p>以下の様な小さい画面が出てくる。<br><img src="/image/sc-javafx8-intro-07.png" alt=""></p>
+<p>さも押してほしそうなボタン、「Click Me!」をクリック<br><img src="/image/sc-javafx8-intro-09.png" alt=""></p>
+<p>これで通過儀礼である世界への挨拶が完了した。</p>
+<h2 id="生成されたソースコードを見てみよう。">生成されたソースコードを見てみよう。</h2>
+<p><img src="/image/sc-javafx8-intro-05.png" alt="プロジェクトのソースから各ファイルを見れる"><br>まずは、<code>FXMLDocument.fxml</code>をダブルクリックすると、JavaFX Scene Builder 2.0が立ち上がる。(もちろんインストールが完了していれば)<br><img src="/image/sc-javafx8-intro-10.png" alt=""></p>
+<p>この画面でGUIを直感的に操作できるし、コントロールの追加もドラッグアンドドロップでできる。<br>全部英語なのは我慢すべし。</p>
+<p>NetBeansに戻ると、以下の様にXMLが書かれた<code>FXMLDocument.fxml</code>が開かれていると思う。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></div><div class="line"></div><div class="line"><span class="pi">&lt;?import java.lang.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import java.util.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import javafx.scene.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import javafx.scene.control.*?&gt;</span></div><div class="line"><span class="pi">&lt;?import javafx.scene.layout.*?&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="title">AnchorPane</span> <span class="attribute">id</span>=<span class="value">"AnchorPane"</span> <span class="attribute">prefHeight</span>=<span class="value">"200"</span> <span class="attribute">prefWidth</span>=<span class="value">"320"</span> <span class="attribute">xmlns:fx</span>=<span class="value">"http://javafx.com/fxml/1"</span> <span class="attribute">fx:controller</span>=<span class="value">"javafxapplication1.FXMLDocumentController"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">children</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">layoutX</span>=<span class="value">"126"</span> <span class="attribute">layoutY</span>=<span class="value">"90"</span> <span class="attribute">text</span>=<span class="value">"Click Me!"</span> <span class="attribute">onAction</span>=<span class="value">"#handleButtonAction"</span> <span class="attribute">fx:id</span>=<span class="value">"button"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">Label</span> <span class="attribute">layoutX</span>=<span class="value">"126"</span> <span class="attribute">layoutY</span>=<span class="value">"120"</span> <span class="attribute">minHeight</span>=<span class="value">"16"</span> <span class="attribute">minWidth</span>=<span class="value">"69"</span> <span class="attribute">fx:id</span>=<span class="value">"label"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">children</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">AnchorPane</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>これが、FXMLである。<br>画面全部XMLで表現できるし、ここでプログラミングすることもできる。</p>
+<p>次に、<code>FXMLDocumentController.java</code>を見てみよう。<br>ソースコードは以下のようになっている。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * To change this license header, choose License Headers in Project Properties.</div><div class="line"> * To change this template file, choose Tools | Templates</div><div class="line"> * and open the template in the editor.</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">package</span> javafxapplication1;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.net.URL;</div><div class="line"><span class="keyword">import</span> java.util.ResourceBundle;</div><div class="line"><span class="keyword">import</span> javafx.event.ActionEvent;</div><div class="line"><span class="keyword">import</span> javafx.fxml.FXML;</div><div class="line"><span class="keyword">import</span> javafx.fxml.Initializable;</div><div class="line"><span class="keyword">import</span> javafx.scene.control.Label;</div><div class="line"></div><div class="line"><span class="javadoc">/**</span></div><div class="line"> *</div><div class="line"> *<span class="javadoctag"> @author</span> Nagatani</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FXMLDocumentController</span> <span class="keyword">implements</span> <span class="title">Initializable</span> </span>{</div><div class="line">    </div><div class="line">    <span class="annotation">@FXML</span></div><div class="line">    <span class="keyword">private</span> Label label;</div><div class="line">    </div><div class="line">    <span class="annotation">@FXML</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title">handleButtonAction</span>(ActionEvent event) {</div><div class="line">        System.out.println(<span class="string">"You clicked me!"</span>);</div><div class="line">        label.setText(<span class="string">"Hello World!"</span>);</div><div class="line">    }</div><div class="line">    </div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initialize</span>(URL url, ResourceBundle rb) {</div><div class="line">        <span class="comment">// TODO</span></div><div class="line">    }    </div><div class="line">    </div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>FXMLと関連付けるコードの上に、<code>@FXML</code>というアノテーションが付けられている。<br>ボタンクリックのイベントは、<code>FXMLDocument.fxml</code>の11行目にあるButtonコントローラの<code>onAction</code>属性に含まれる<code>#handleButtonAction</code>から、<code>FXMLDocumentController.java</code>の26行目以降の<code>handleButtonAction</code>メソッドが呼ばれるようになっていることがソースから分かる。</p>
+<p><code>initialize</code>メソッドには、<code>// TODO</code>コメントが入っているので、画面要素の初期化を行う場合はここに書けということだろう。</p>
+<p>最後に、<code>JavaFXApplication1.java</code>を見よう。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * To change this license header, choose License Headers in Project Properties.</div><div class="line"> * To change this template file, choose Tools | Templates</div><div class="line"> * and open the template in the editor.</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">package</span> javafxapplication1;</div><div class="line"></div><div class="line"><span class="keyword">import</span> javafx.application.Application;</div><div class="line"><span class="keyword">import</span> javafx.fxml.FXMLLoader;</div><div class="line"><span class="keyword">import</span> javafx.scene.Parent;</div><div class="line"><span class="keyword">import</span> javafx.scene.Scene;</div><div class="line"><span class="keyword">import</span> javafx.stage.Stage;</div><div class="line"></div><div class="line"><span class="javadoc">/**</span></div><div class="line"> *</div><div class="line"> *<span class="javadoctag"> @author</span> Nagatani</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaFXApplication1</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>{</div><div class="line">    </div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span>(Stage stage) <span class="keyword">throws</span> Exception {</div><div class="line">        Parent root = FXMLLoader.load(getClass().getResource(<span class="string">"FXMLDocument.fxml"</span>));</div><div class="line">        </div><div class="line">        Scene scene = <span class="keyword">new</span> Scene(root);</div><div class="line">        </div><div class="line">        stage.setScene(scene);</div><div class="line">        stage.show();</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="javadoc">/**</span></div><div class="line">     *<span class="javadoctag"> @param</span> args the command line arguments</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String[] args) {</div><div class="line">        launch(args);</div><div class="line">    }</div><div class="line">    </div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>これは単純に画面を呼び出すだけのコードが書かれている。<br>FXMLの読み込みには、<code>FXMLLoader</code>が使われていることが分かる。</p>
+<p>ここまで一気に作成してくれるのはありがたいけど、ある程度詳しくなると、空のJavaFXアプリケーションからFXML追加してやった方が良さそうかもしれないので複雑な心境である。</p>
+<h1 id="まとめ">まとめ</h1>
+<p>FXMLは、コードとUIデザインを分離できるので、良い。<br>MicrosoftのWPFと似てるような(そうでもないような)感じなので、意外とすんなり入ってきた。</p>
+<p>今回は簡単にプログラマの通過儀礼である世界への挨拶を済ませたので、次回以降はもう少し踏み込んだ内容を書き進めたい。</p>
+<p>※次回の記事の内容は未定です。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今回から、JavaFX8(JavaFX on Java8)についての記事を幾つか書こうと思う。<br>前持って言って置かなければならないんだけど、私はJavaFXでの開発実績がない。<br>この記事もある程度勉強進めた段階で書いてるけど、自分がわかるように書くだけなので参考にならなくても知らんし、間違った内容もあるかもしれんし、途中で飽きたら放置するのでそのつもりでお願いします。</p>
+<h2 id="Java8から標準機能となったJavaFX">Java8から標準機能となったJavaFX</h2>
+<p>Swingと取って代わって、JavaFXがJavaのGUI開発の標準的な位置づけになりつつある（なった）と思って差し支えないかと思う。<br>何言ってんだSwingが標準だろうが！ってお怒りの方、落ち着いてください。そういう意見もあります。(あるのかどうかも知らんけど)<br>]]>
+    
+    </summary>
+    
+      <category term="Java" scheme="http://nagatani.github.io/tags/Java/"/>
+    
+      <category term="JavaFX8" scheme="http://nagatani.github.io/tags/JavaFX8/"/>
+    
+      <category term="JavaFXSceneBuilder2" scheme="http://nagatani.github.io/tags/JavaFXSceneBuilder2/"/>
+    
+      <category term="FXML" scheme="http://nagatani.github.io/tags/FXML/"/>
+    
+      <category term="JavaFX8" scheme="http://nagatani.github.io/categories/JavaFX8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android Studioを入れたMacBook Airでbashからadbコマンドを使えるようにする]]></title>
+    <link href="http://nagatani.github.io/2014/09/14/androidstudio-adb/"/>
+    <id>http://nagatani.github.io/2014/09/14/androidstudio-adb/</id>
+    <published>2014-09-14T09:39:30.000Z</published>
+    <updated>2014-09-14T11:08:39.000Z</updated>
+    <content type="html"><![CDATA[<p>なんやかんやあれやこれやでadbコマンド使わないといけなくなったので、その手順をメモしておく。<br>母艦のWindowsマシンには、Android SDKを手動セットアップしてたのでそれ使えば良いだけの話なんだけど、たまたま手元にあるのはMacBook Airだったので、adbコマンド使えるようにしとこう、というわけです。</p>
+<p>前提として、Android Studioはインストール済み。</p>
+<h2 id="Android_SDKを別途入れなくても、Android_StudioにはSDKが含まれてる">Android SDKを別途入れなくても、Android StudioにはSDKが含まれてる</h2>
+<p>ので、それのPATHを通してやれば良いわけです。</p>
+<h2 id="Android_Studioに含まれるSDKの場所">Android Studioに含まれるSDKの場所</h2>
+<p>環境によって異なるかもしれないので注意が必要。<br>僕のMacBook AirにインストールしたAndroid Studioの構成では以下のパス以下にSDKが含まれていた。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/Applications/</span>Android\ Studio.app<span class="regexp">/sdk/</span></div></pre></td></tr></table></figure>
+
+<p>目的のadb本体は、<code>sdk</code>ディレクトリ以下の、<code>platform-tools</code>にある。</p>
+<h2 id="adbコマンドを使用できるように、PATHを通す">adbコマンドを使用できるように、PATHを通す</h2>
+<p>ターミナルに使うのが何かで設定が異なる。<br>僕のMacBook Airは初期設定のままのbashを使ってるので、以下のようにする。</p>
+<h3 id="bashの場合">bashの場合</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~/.bash_profile</div></pre></td></tr></table></figure>
+
+<p>に以下の一行を追加する。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">export <span class="constant">PATH</span>=<span class="variable">$PATH</span><span class="symbol">:/Applications/Android</span>\ <span class="constant">Studio</span>.app/sdk/platform-tools</div></pre></td></tr></table></figure>
+
+<p>エディタはお好きにどうぞ。</p>
+<h3 id="普段あんま使わないけど、zshの場合は……">普段あんま使わないけど、zshの場合は……</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~/.zshrc</div></pre></td></tr></table></figure>
+
+<p>に以下同文。</p>
+<h2 id="adbが動作するか確認する。">adbが動作するか確認する。</h2>
+<p>設定を読み込みし直さないといけないので、ターミナル再起動。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ adb <span class="built_in">help</span></div></pre></td></tr></table></figure>
+
+<p>とかでヘルプが出て来ればオッケーなんじゃないですかね。</p>
+<p>僕からは以上です。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>なんやかんやあれやこれやでadbコマンド使わないといけなくなったので、その手順をメモしておく。<br>母艦のWindowsマシンには、Android SDKを手動セットアップしてたのでそれ使えば良いだけの話なんだけど、たまたま手元にあるのはMacBook Airだったので、]]>
+    </summary>
+    
+      <category term="AndroidStudio" scheme="http://nagatani.github.io/tags/AndroidStudio/"/>
+    
+      <category term="adb" scheme="http://nagatani.github.io/tags/adb/"/>
+    
+      <category term="Andriod" scheme="http://nagatani.github.io/categories/Andriod/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[GitHub Pagesで運用するHexoで画像を記事内に挿入する（アップロードする）方法の最適解ってあるの？]]></title>
+    <link href="http://nagatani.github.io/2014/09/13/hexo-image-add/"/>
+    <id>http://nagatani.github.io/2014/09/13/hexo-image-add/</id>
+    <published>2014-09-12T18:55:09.000Z</published>
+    <updated>2014-09-12T19:23:43.000Z</updated>
+    <content type="html"><![CDATA[<p>タイトルの通りです。</p>
+<h2 id="Hexoで画像を挿入する方法">Hexoで画像を挿入する方法</h2>
+<p>調べたけど、どれもしっくり来ない。<br>プラグインはコレジャナイ感ある。</p>
+<h2 id="自己流">自己流</h2>
+<p>で、自分がやってみてる方法は、</p>
+<ol>
+<li>「image」ページを作成する。</li>
+<li>作成した「image」ページのディレクトリに画像を突っ込む。</li>
+<li>記事からは、「/image/突っ込んだ画像」で画像を参照させる。</li>
+<li>公開するタイミングで、ページの画像もgit pushできる。</li>
+<li>画像差し込めた。</li>
+</ol>
+<p>という流れになってる。<br><a id="more"></a></p>
+<h3 id="順を追う">順を追う</h3>
+<h4 id="1-_「image」ページを作成する。">1. 「image」ページを作成する。</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page <span class="string">"image"</span></div></pre></td></tr></table></figure>
+
+<h4 id="2-_作成した「image」ページのディレクトリに画像を突っ込む。">2. 作成した「image」ページのディレクトリに画像を突っ込む。</h4>
+<p>ファイル名が被らないように、記事毎でユニークにしておくといいかも。</p>
+<h4 id="3-_記事からは、「/image/突っ込んだ画像」で画像を参照させる。">3. 記事からは、「/image/突っ込んだ画像」で画像を参照させる。</h4>
+<figure class="highlight Markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![](/image/screenshot.png)</div></pre></td></tr></table></figure>
+
+<p>みたいな感じで。<br>タイトルとか入れたければ入れる。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+
+<p>でローカルプレビューして画像が見えてれば多分OK。</p>
+<h4 id="4-_公開するタイミングで、ページの画像もgit_pushできる。">4. 公開するタイミングで、ページの画像もgit pushできる。</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d -g</div></pre></td></tr></table></figure>
+
+<p>とかこんなんで良いと思う。<br>（記事の公開、毎回このコマンド使ってるけど、これもあってるのか正直よくわからん。）<br>（ていうか記事の公開だけでこのコマンドは間違ってる。あとでちゃんと調べます。）</p>
+<h4 id="5-_画像差し込めた。">5. 画像差し込めた。</h4>
+<p>デデーン</p>
+<p>前回の記事：<a href="http://nagatani.github.io/2014/09/12/Markdown-cms/" target="_blank" rel="external">Markdownで書けるCMS | nagatani.github.io</a>では、この方法でスクリーンショットの差し込みをしてる。</p>
+<h2 id="なんかもっといい方法ないスか？">なんかもっといい方法ないスか？</h2>
+<p>ページ作成してるの、多分用途として間違ってる気がするし、でもHexoインストールしたディレクトリ直下とか画像置きたくないし、で何かいい方法知ってたら教えて欲しいっす。<br>そもそもGitがよくわからん。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>タイトルの通りです。</p>
+<h2 id="Hexoで画像を挿入する方法">Hexoで画像を挿入する方法</h2>
+<p>調べたけど、どれもしっくり来ない。<br>プラグインはコレジャナイ感ある。</p>
+<h2 id="自己流">自己流</h2>
+<p>で、自分がやってみてる方法は、</p>
+<ol>
+<li>「image」ページを作成する。</li>
+<li>作成した「image」ページのディレクトリに画像を突っ込む。</li>
+<li>記事からは、「/image/突っ込んだ画像」で画像を参照させる。</li>
+<li>公開するタイミングで、ページの画像もgit pushできる。</li>
+<li>画像差し込めた。</li>
+</ol>
+<p>という流れになってる。<br>]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://nagatani.github.io/tags/hexo/"/>
+    
+      <category term="CMS" scheme="http://nagatani.github.io/categories/CMS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Markdownで書けるCMS]]></title>
+    <link href="http://nagatani.github.io/2014/09/12/Markdown-cms/"/>
+    <id>http://nagatani.github.io/2014/09/12/Markdown-cms/</id>
+    <published>2014-09-11T19:00:46.000Z</published>
+    <updated>2014-09-11T21:08:53.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前置き">前置き</h2>
+<p>CMSについての話です。<br>いつもは大抵Wordpress使ってるんだけど、なんだかんだ言って更新がめんどいんですよ。<br>ただ私が面倒くさがりってこともあるんですが……。</p>
+<p>講師業で使う資料作成にMarkdownをよく使うようになって、<br>「Markdownマジ楽。」<br>からの<br>「もうMarkdownで記事書けば良くね？」<br>ってなった次第です。</p>
+<p>で、いろいろあって今このブログでHexo使ってます。<br>だけどこのブログは、ほとんど自分のメモ書きみたいな感じで使っていきたい。</p>
+<p>そのいろいろあった時にMarkdownで記事書けるCMSというかブログシステム探した結果報告と言うか見つけたものを雑に紹介しておこうと思ってこれ書きました。<br><a id="more"></a></p>
+<h1 id="Markdownで記事が書けるCMS">Markdownで記事が書けるCMS</h1>
+<p>前置きが長くなりましたが、良さそうかなーって思ったものをとりあえず一覧で。</p>
+<ul>
+<li><a href="http://picocms.org/" target="_blank" rel="external">Pico</a></li>
+<li><a href="http://noshi.cundd.net/" target="_blank" rel="external">NoShi</a></li>
+<li><a href="http://dropplets.com/" target="_blank" rel="external">Dropplets</a></li>
+<li><a href="https://github.com/csu/singularity-cms" target="_blank" rel="external">Singularity</a></li>
+<li><a href="http://hexo.io/" target="_blank" rel="external">Hexo</a></li>
+</ul>
+<p>以降個別に紹介していきます。</p>
+<h2 id="Pico">Pico</h2>
+<p><a href="http://picocms.org/" target="_blank" rel="external">Pico - A stupidly simple, blazing fast, flat file CMS.</a><br><img src="/image/sc-pico.png" alt=""></p>
+<h3 id="詳細">詳細</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">項目名</th>
+<th style="text-align:left">詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">動作環境</td>
+<td style="text-align:left">PHP 5.3以上 Apache:mod_rewrite</td>
+</tr>
+<tr>
+<td style="text-align:left">ライセンス</td>
+<td style="text-align:left">MIT</td>
+</tr>
+</tbody>
+</table>
+<p>私が管理しているサイトでも一部で使用している。<br>Markdownファイルをアップロードすると、初回アクセス時にHTMLページが生成される。<br>ドキュメントが豊富で、プラグインも豊富。<br>テンプレートエンジンにTwigが使われてて分かりやすい。（個人的な感想）<br>プラグインの開発も比較的簡単な印象。（これも個人的な感想）</p>
+<p>Picoから派生したCoqooなんてのもある。<br><a href="http://coqoo.net/" target="_blank" rel="external">Markdown CMS Coqoo ―虚空― | Markdown CMS Coqoo ―虚空―</a><br>日本人作者なので妙な安心感がある。</p>
+<p>ただ、PHPである程度わかって、Picoプラグインの開発ができるのなら、こういった派生のものを使用するより、Picoそのもの使った方が良いってぐらいPicoは簡単かと。<br>レンタルサーバーで運用する場合は、PHPのバージョンが5.3以上になってることを確認しよう！（自戒を込めて）</p>
+<h2 id="NoShi">NoShi</h2>
+<p><a href="http://noshi.cundd.net/" target="_blank" rel="external">NoShi - The no shi! CMS</a><br><img src="/image/sc-noshi.png" alt=""></p>
+<h3 id="詳細-1">詳細</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">項目名</th>
+<th style="text-align:left">詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">動作環境</td>
+<td style="text-align:left">PHP 5.4以上</td>
+</tr>
+<tr>
+<td style="text-align:left">ライセンス</td>
+<td style="text-align:left">MIT</td>
+</tr>
+</tbody>
+</table>
+<p>和風っぽいけど日本製ではないのです。<br>Apacheじゃなくても運用できるので良さ気な印象を受けたが、まだ新しいので、ドキュメントも少なく若干敷居が高く感じた。<br>サイトのデザインが良さそうな雰囲気だったので紹介しておきます。</p>
+<h2 id="Dropplets">Dropplets</h2>
+<p><a href="http://dropplets.com/" target="_blank" rel="external">Dropplets - Welcome to an Easier Way to Blog</a><br><img src="/image/sc-dropplets.png" alt=""></p>
+<h3 id="詳細-2">詳細</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">項目名</th>
+<th style="text-align:left">詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">動作環境</td>
+<td style="text-align:left">PHP (必須バージョン不明)</td>
+</tr>
+<tr>
+<td style="text-align:left">ライセンス</td>
+<td style="text-align:left">MIT</td>
+</tr>
+</tbody>
+</table>
+<p>使いやすそうなんだけど、ドキュメントが少ないなーって思って使うのを諦めました。<br>使うの諦めたので、PHPの必須バージョンとか詳細がわからない……。</p>
+<h2 id="Singularity">Singularity</h2>
+<p><a href="https://github.com/csu/singularity-cms" target="_blank" rel="external">Singularity - GitHub:csu/singularity-cms</a><br>リンク先がGitHubなのでスクリーンショットはなし。</p>
+<h3 id="詳細-3">詳細</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">項目名</th>
+<th style="text-align:left">詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">動作環境</td>
+<td style="text-align:left">PHP (必須バージョン不明)</td>
+</tr>
+<tr>
+<td style="text-align:left">ライセンス</td>
+<td style="text-align:left">MIT</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://strapdownjs.com/" target="_blank" rel="external">Strapdown.js</a>を使って表示のタイミングで都度MarkdownからHTMLに変換するタイプのCMS。<br>PHPのソース40行しかなく、あとはhtaccessのみで構成されてて非常にシンプルです。<br>都度Markdownから変換してるので、キャッシュとかそういった観点から中規模から大規模なサイトには使用しづらいかなーって思い、使用を断念しました。<br>このCMSを知ったおかげでStrapdown.jsも知ることができたので良い。</p>
+<h2 id="Hexo">Hexo</h2>
+<p><a href="http://hexo.io/" target="_blank" rel="external">Hexo</a><br><img src="/image/sc-hexo.png" alt=""></p>
+<h3 id="詳細-4">詳細</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">項目名</th>
+<th style="text-align:left">詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">動作環境</td>
+<td style="text-align:left">Node.js</td>
+</tr>
+<tr>
+<td style="text-align:left">ライセンス</td>
+<td style="text-align:left">MIT</td>
+</tr>
+</tbody>
+</table>
+<p>このブログがそう。<br>何が良いって、GitHub Pagesで運用が可能ってところです。<br>Gitの使い方とかを学ぶついでに良いってところもこれを使用しているポイントですね。<br>日本語で書かれたブログ記事も豊富なので、インストールにつまずくことは少ないような気がします。</p>
+<p>※読み方がわからん。ヘクソでいいの？？</p>
+<h1 id="まとめ">まとめ</h1>
+<p>だいぶ雑に紹介した感ある。</p>
+<p>Markdown便利だからMarkdownでブログ書くのマジオススメ。<br>あと、紹介したCMSはどれもデータベースを使用しないファイルベースのものばかりなので、MySQLとかそういう呪縛に囚われない。</p>
+<p>個人的に一押しなのがPicoですかね。<br>カスタマイズしやすいのが一番の理由。</p>
+<p>「雑に紹介した」というのを免罪符にしたい気持ちでいっぱいです。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="前置き">前置き</h2>
+<p>CMSについての話です。<br>いつもは大抵Wordpress使ってるんだけど、なんだかんだ言って更新がめんどいんですよ。<br>ただ私が面倒くさがりってこともあるんですが……。</p>
+<p>講師業で使う資料作成にMarkdownをよく使うようになって、<br>「Markdownマジ楽。」<br>からの<br>「もうMarkdownで記事書けば良くね？」<br>ってなった次第です。</p>
+<p>で、いろいろあって今このブログでHexo使ってます。<br>だけどこのブログは、ほとんど自分のメモ書きみたいな感じで使っていきたい。</p>
+<p>そのいろいろあった時にMarkdownで記事書けるCMSというかブログシステム探した結果報告と言うか見つけたものを雑に紹介しておこうと思ってこれ書きました。<br>]]>
+    
+    </summary>
+    
+      <category term="Markdown" scheme="http://nagatani.github.io/tags/Markdown/"/>
+    
+      <category term="CMS" scheme="http://nagatani.github.io/tags/CMS/"/>
+    
+      <category term="CMS" scheme="http://nagatani.github.io/categories/CMS/"/>
+    
+  </entry>
+  
+</feed>
