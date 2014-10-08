@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nagatani.github.io/2014/09/11/hello-world/</loc>
+    <lastmod>2014-10-08T13:39:01.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nagatani.github.io/about/index.html</loc>
     <lastmod>2014-10-08T08:32:18.000Z</lastmod>
   </url>
@@ -39,11 +44,6 @@
   <url>
     <loc>http://nagatani.github.io/image/index.html</loc>
     <lastmod>2014-09-11T19:53:40.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://nagatani.github.io/2014/10/08/hello-world/</loc>
-    <lastmod>2014-09-11T16:55:28.000Z</lastmod>
   </url>
   
 </urlset>

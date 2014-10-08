@@ -4,7 +4,7 @@
   <subtitle><![CDATA[書くことがあれば書く]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://nagatani.github.io/"/>
-  <updated>2014-10-08T13:15:43.695Z</updated>
+  <updated>2014-10-08T13:39:09.090Z</updated>
   <id>http://nagatani.github.io/</id>
   
   <author>
@@ -13,32 +13,6 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://nagatani.github.io/2014/10/08/hello-world/"/>
-    <id>http://nagatani.github.io/2014/10/08/hello-world/</id>
-    <published>2014-10-08T13:13:25.000Z</published>
-    <updated>2014-09-11T16:55:28.000Z</updated>
-    <content type="html"><![CDATA[<p>GitHub Pagesに<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>入れた。</p>
-<p>何書くかは決めてない。<br>テキトーに何かしら書いていきたい。</p>
-<h2 id="HexoをGitHub_Pagesに構築するのに参考にしたサイト">HexoをGitHub Pagesに構築するのに参考にしたサイト</h2>
-<ul>
-<li><a href="http://qiita.com/bird_nitryn/items/5988a1efe47e0d47132b" target="_blank" rel="external">Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita</a></li>
-<li><a href="http://liginc.co.jp/web/programming/server/104594" target="_blank" rel="external">所要時間3分!? Github PagesとHEXOで爆速ブログ構築してみよう！ | 株式会社LIG</a></li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>GitHub Pagesに<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>入れた。</p>
-<p>何書くかは決めてない。<br>テキトーに何かしら書いていきたい。</p>
-<h2 id="He]]>
-    </summary>
-    
-      <category term="hexo" scheme="http://nagatani.github.io/tags/hexo/"/>
-    
-      <category term="Diary" scheme="http://nagatani.github.io/categories/Diary/"/>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[JavaFX8でのLook and Feelを設定する]]></title>
@@ -481,6 +455,32 @@
       <category term="CMS" scheme="http://nagatani.github.io/tags/CMS/"/>
     
       <category term="CMS" scheme="http://nagatani.github.io/categories/CMS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://nagatani.github.io/2014/09/11/hello-world/"/>
+    <id>http://nagatani.github.io/2014/09/11/hello-world/</id>
+    <published>2014-09-11T06:11:01.000Z</published>
+    <updated>2014-10-08T13:39:01.000Z</updated>
+    <content type="html"><![CDATA[<p>GitHub Pagesに<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>入れた。</p>
+<p>何書くかは決めてない。<br>テキトーに何かしら書いていきたい。</p>
+<h2 id="HexoをGitHub_Pagesに構築するのに参考にしたサイト">HexoをGitHub Pagesに構築するのに参考にしたサイト</h2>
+<ul>
+<li><a href="http://qiita.com/bird_nitryn/items/5988a1efe47e0d47132b" target="_blank" rel="external">Hexo と GitHub Pages でブログ環境を構築して公開する - Qiita</a></li>
+<li><a href="http://liginc.co.jp/web/programming/server/104594" target="_blank" rel="external">所要時間3分!? Github PagesとHEXOで爆速ブログ構築してみよう！ | 株式会社LIG</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>GitHub Pagesに<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>入れた。</p>
+<p>何書くかは決めてない。<br>テキトーに何かしら書いていきたい。</p>
+<h2 id="He]]>
+    </summary>
+    
+      <category term="hexo" scheme="http://nagatani.github.io/tags/hexo/"/>
+    
+      <category term="Diary" scheme="http://nagatani.github.io/categories/Diary/"/>
     
   </entry>
   
