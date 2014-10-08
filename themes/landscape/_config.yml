@@ -1,0 +1,28 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:
+- ads
+- category
+- recent_posts
+- archive
+- tag
+- tagcloud
+
+# Miscellaneous
+google_analytics: UA-43292130-3
+favicon: /favicon.png
+twitter: Nagatani
+google_plus:
+fb_admins:
+fb_app_id:
